@@ -1,21 +1,19 @@
 INFO:     Will watch for changes in these directories: ['/home/workspace']
 INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
-INFO:     Started reloader process [567] using StatReload
+INFO:     Started reloader process [645] using StatReload
 /home/workspace/database.py:25: UserWarning: You appear to be connected to a CosmosDB cluster. For more information regarding feature compatibility and support please visit https://www.mongodb.com/supportability/cosmosdb
   _client = MongoClient(database_url)
-INFO:     Started server process [569]
+INFO:     Started server process [647]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
-INFO:     172.20.0.1:35968 - "HEAD / HTTP/1.1" 405 Method Not Allowed
-INFO:     172.20.0.1:51298 - "POST /api/auth/signup HTTP/1.1" 422 Unprocessable Content
-INFO:     172.20.0.1:39308 - "POST /api/auth/signup HTTP/1.1" 422 Unprocessable Content
+INFO:     172.20.0.1:47604 - "HEAD / HTTP/1.1" 405 Method Not Allowed
 (trapped) error reading bcrypt version
 Traceback (most recent call last):
   File "/usr/local/lib/python3.13/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
     version = _bcrypt.__about__.__version__
               ^^^^^^^^^^^^^^^^^
 AttributeError: module 'bcrypt' has no attribute '__about__'
-INFO:     172.20.0.1:49946 - "POST /api/auth/signup HTTP/1.1" 500 Internal Server Error
+INFO:     172.20.0.1:39980 - "POST /api/auth/signup HTTP/1.1" 500 Internal Server Error
 ERROR:    Exception in ASGI application
 Traceback (most recent call last):
   File "/usr/local/lib/python3.13/site-packages/uvicorn/protocols/http/h11_impl.py", line 406, in run_asgi
@@ -85,10 +83,10 @@ Traceback (most recent call last):
            ^^^^^^^^^^^^
   File "/usr/local/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 807, in run
     result = context.run(func, *args)
-  File "/home/workspace/main.py", line 165, in signup
+  File "/home/workspace/main.py", line 166, in signup
     "password_hash": get_password_hash(payload.password),
                      ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
-  File "/home/workspace/main.py", line 96, in get_password_hash
+  File "/home/workspace/main.py", line 97, in get_password_hash
     return pwd_context.hash(password)
            ~~~~~~~~~~~~~~~~^^^^^^^^^^
   File "/usr/local/lib/python3.13/site-packages/passlib/context.py", line 2258, in hash
